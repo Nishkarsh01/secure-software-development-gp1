@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <link rel='stylesheet' href='css/main.css' />
+    <link rel='stylesheet' href='css/audio.css' />
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type='module' src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" defer></script>
+    <script type='module' src='js/supabaseClient.js' defer></script>
+    <!-- <script type='module' src='js/nav.js' defer></script> -->
+    <script type='module' src='js/audio.js' defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main class='container audio-container'>
+
+        <div class="container audio-player-container" data-audio-id="audio2">
+            <div class='row'>
+                <!-- IMAGE  -->
+                <div class='col-1'>
+                    <img class='audio-cover-image' src='img/profile-placeholder.jpg'>
+                </div>
+                <audio class="audio-player" id="audio2"
+                    src="https://vfhfxrahmimzvkxnyiqx.supabase.co/storage/v1/object/public/songs/ffd45d4b-7012-4a80-8700-34106401f1b6.mp3"></audio>
+                <!-- PLAY/PAUSE BUTTON -->
+                <div class='col-1'>
+                    <button class="playButton">
+                        <img src='img/play.png'>
+                    </button>
+
+                    <button class="pauseButton" style="display:none;">
+                        <img src='img/pause.png'>
+                    </button>
+                </div>
+
+                <!-- SEEKER -->
+                <div class='col'>
+                    <div class='row audio-info'>
+                        <div class='col-1 audio-profile-pic-container'>
+                            <img class='audio-profile-pic' src='img/profile-placeholder.jpg'>
+                        </div>
+                        <div class='col'>
+                            <p class='audio-artist-display'>Artist Name</p>
+                            <p class='audio-title'>Audio Title</p>
+                        </div>
+
+                    </div>
+                    <div class='row'>
+                        <div class='col'>
+                            <input type="range" class="seekSlider" value="0" step="1">
+                        </div>
+
+                        <div class='col timer'>
+                            <span class="currentTime">0:00</span>
+                            <span> / </span>
+                            <span class="totalDuration">0:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add more audio player containers as needed -->
+
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!--Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+.cover-img-container {
+    background: black;
+    opacity: 30%;
+    border-radius: 0.5em;
+}
+
+.form-label {
+    font-weight: lighter;
+}
+
+.create-post-container {
+    background-color: #205864;
+    max-width: 900px;
+    border-radius: 0.5em;
+    border: none;
+}
+
+.submit-button {
+    background-color: #F49404;
+    border: none;
+}
+
+.submit-button:hover {
+    background-color: white;
+    color: black;
+}
+
+sup {
+    opacity: 60%;
+}

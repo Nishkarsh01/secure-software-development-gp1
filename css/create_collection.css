@@ -1,0 +1,21 @@
+.form-container {
+    background-color: #F49404;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.btn-primary {
+    background-color: #205864;
+    border: none;
+    transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: #205864;
+}
+
+.btn-primary:active {
+    background-color: white !important;
+    color: #F49404 !important;
+}

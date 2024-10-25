@@ -1,0 +1,47 @@
+.all-collections-container {
+    display: none;
+}
+
+.collections-container {
+    margin: 1em auto;
+    max-width: 600px;
+    background-color: #F49404;
+    padding: 1em;
+    border-radius: 0.5em;
+
+}
+
+.collection-items-list {
+    padding: 0.5em;
+    background-color: #102732;
+    border-radius: 0.5em;
+    overflow: scroll;
+    max-height: 600px;
+    border: 1px solid orange;
+}
+
+.collection-title {
+    text-align: start;
+}
+
+.collection-item {
+    background-color: #205864;
+    border-radius: 0.5em;
+    margin-bottom: 0.2em;
+}
+.collection-item-img-container {
+    max-width: fit-content;
+}
+.collection-item-img {
+    margin: 1em;
+    height: 3em;
+    width: 3em;
+    border-radius: 4px;
+}
+.collection-item-user-img-container {
+    max-width: fit-content;
+}
+.collection-item-user-img {
+    height: 1.5em;
+    border-radius: 2em;
+}

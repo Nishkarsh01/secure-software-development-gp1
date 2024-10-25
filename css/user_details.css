@@ -1,0 +1,10 @@
+h3 {
+    color: white;
+    font-weight: lighter;
+    font-size: 1em;
+    font-style: italic;
+}
+
+.form-label {
+    font-weight: lighter;
+}

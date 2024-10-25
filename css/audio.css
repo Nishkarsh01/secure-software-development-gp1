@@ -1,0 +1,102 @@
+.audio-player-container {
+    background-color: #205864;
+    padding: 1em;
+    margin: 1em auto;
+    border-radius: 0.5em;
+}
+
+.audio-cover-image {
+    height: 5em;
+    width: 5em;
+    border-radius: 0.5em;
+}
+.audio-profile-pic {
+    max-height: 2em;
+    border-radius: 2em;
+}
+.audio-artist-display {
+    color: white;
+    margin: 0;
+}
+.audio-title {
+    color: #F49404;
+    font-size: 1.3em;
+    margin: 0;
+}
+
+.audio-info {
+    min-width: fit-content;
+}
+
+.playButton,
+.pauseButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 3em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+.playButton img,
+.pauseButton img {
+    vertical-align: center;
+    align-self: center;
+    height: 3em;
+    width: 3em;
+    margin-top:auto;
+    margin-bottom: auto;
+}
+
+.playButton:hover,
+.pauseButton:hover {
+    scale: 1.05;
+}
+
+.seekSlider {
+    width: 90%;
+    margin: auto;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0.5em;
+}
+
+.seekSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #F49404;
+    cursor: pointer;
+    border-radius: 0.5em;
+
+}
+
+.seekSlider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #F49404;
+    cursor: pointer;
+}
+
+.currentTime, .totalDuration {
+    font-size: 0.9em;
+}
+
+.col-1 {
+    min-width: fit-content;
+}
+
+.timer {
+    background: black;
+    border-radius: 0.5em;
+    max-width: 6.5em;
+    margin: auto 1em;
+    text-align: center;
+}
+
+span {
+    color: #F49404;
+}

@@ -1,0 +1,54 @@
+.summary-container {
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: #205864;
+    max-width: fit-content;
+    min-width: fit-content;
+    
+}
+
+.profile-header {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.bio {
+    max-width: 20em;
+}
+
+
+#profileDisplayName {
+    color: white;
+    font-weight: lighter;
+}
+
+.summary-profile-picture {
+    height: 20em;
+    width: 20em;
+    border-radius: 0.5em;
+    border: none;
+}
+
+.profile-button {
+    margin: 1em;
+    padding: 0.5em;
+    background-color: #F49404;
+    border-radius: 0.5em;
+    transition: background-color 0.2s ease, padding-left 0.5s ease;
+    text-decoration: none;
+}
+
+.profile-button-active {
+    background-color: #205864;
+    padding-left: 3em;
+}
+
+.profile-button:hover {
+    background-color: #205864;
+    padding-left: 3em;
+}
+
+.profile-button.h2 {
+    margin-top: auto;
+    margin-bottom: auto;
+}

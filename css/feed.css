@@ -1,0 +1,29 @@
+.post-menu-icon {
+    height: 3rem;
+}
+
+.create-menu {
+    color: white;
+}
+
+.create-row {
+    margin: 1em auto;
+}
+
+.create-option {
+    background-color: #F49404;
+    border-radius: 0.5em;
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    margin: 1em;
+
+    transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.create-option:hover {
+    background-color: white;
+    color: #205864;
+}
+
+

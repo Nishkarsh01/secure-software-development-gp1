@@ -1,0 +1,26 @@
+.create-post-container {
+    background-color: #205864;
+    max-width: 900px;
+    border-radius: 0.5em;
+    border: none;
+}
+
+.submit-button {
+    background-color: #F49404;
+    border: none;
+}
+
+.submit-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.item-selection {
+    display: none;
+}
+
+
+
+sup {
+    opacity: 60%;
+}

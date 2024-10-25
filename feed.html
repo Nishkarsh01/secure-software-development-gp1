@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>thing - Main Feed</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <link rel='stylesheet' href='css/main.css' />
+    <link rel='stylesheet' href='css/feed.css' />
+    <link rel='stylesheet' href='css/nav.css' />
+    <link rel='stylesheet' href='css/post.css' />
+    <link rel='stylesheet' href='css/audio.css' />
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type='module' src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" defer></script>
+    <script type='module' src='js/supabaseClient.js' defer></script>
+    <script type='module' src='js/nav.js' defer></script>
+    <script type='module' src='js/feed.js' defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+        <nav class="navbar navbar-expand">
+            <div class="container-fluid nav-container">
+                <!-- Image on the left -->
+                <a class="navbar-brand" href="feed.html">
+                    <img src="img/logo-big.svg" alt="Logo" width="120" height="30">
+                </a>
+                <img id='navProfilePic'>
+                <a id='userDisplay'></a>
+
+
+                <!-- Navbar links on the right -->
+                <ul class="navbar-nav ms-auto flex-nowrap">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="">Music</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li> -->
+                    <li class='nav-item'>
+                        <a id='signOut' class='nav-link' href='#'>SIGN OUT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+    </header>
+    <main>
+        <div class='container'>
+            <div class='row post-menu'>
+                <div class='col-7 text-end'>
+                    <h2>
+                        Welcome to your feed
+                    </h2>
+
+                    <h4>Post something, share your tunes, or check out what's going on below</h4>
+                </div>
+                <div class='col-5'>
+                    <div class='container post-menu-icon-container'>
+                        <div class='row'>
+                            <div class='col-6 text-center'>
+                                <a class='post-menu-icon' href='create_post.html'>
+                                    <img class='post-menu-img' src='img/create-post.png'>
+                                </a>
+                            </div>
+                            <div class='col-6 text-center'>
+
+                                <a class='post-menu-icon' href='upload_song.html'>
+                                    <img class='post-menu-img' src='img/upload.png'>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class='container create-menu'>
+            <div class='row create-row'>
+                <a class='col create-option text-center' href='create_album.html'>
+                    +ALBUM
+                </a>
+                <a class='col create-option text-center' href='create_playlist.html'>
+                    +PLAYLIST
+                </a>
+                <a class='col create-option text-center' href='create_collection.html'>
+                    +COLLECTION
+                </a>
+            </div>
+        </div>
+
+
+
+
+        <!-- ALL POSTS -->
+
+        <div class='container all-posts-container'>
+            <div class='container post-container justify-content-center'>
+                <div class='row post-header'>
+                    <div class='col-2 profile-pic-container'>
+                        <img src='img/profile-placeholder.jpg' class='profile-picture'>
+                    </div>
+                    <div class='col-10 post-info-container'>
+                        <a href='#' class='username'>
+                            username
+                        </a>
+                        <h2 class='post-title'>
+                            post-title
+                        </h2>
+                        <p class='post-time'></p>
+                    </div>
+                </div>
+                <div class='row img-container'>
+                    <img class='post-img img-fluid' src=''>
+                </div>
+                <div class='row divider'></div>
+                <div class='row post-body'>
+                    <p>post-body</p>
+                </div>
+                <div class='divider'></div>
+                <div class='row post-footer'>
+                    <div class='col-9 footer-links-gap'></div>
+                    <div class='col-3 footer-links-container pull-right'>
+                        <a class='footer-link' href='#'>
+                            <img class='footer-icon' src='img/share-icon.png' />
+                        </a>
+                        <a class='footer-link' href='#'>
+                            <img id='comment-icon-1' class='footer-icon comment-icon' src='img/comment-icon.png' />
+                        </a>
+                        <span class='num-comments'>0</span>
+                        <a class='footer-link' href='#'>
+                            <img class='footer-icon' src='img/heart-icon.png' />
+                        </a>
+                        <span class='num-likes'>0</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src='js/post.js'></script>
+</body>
+
+</html>

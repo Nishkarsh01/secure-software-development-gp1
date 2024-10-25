@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>thing - Create a new playlist</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <link rel='stylesheet' href='css/main.css' />
+    <link rel='stylesheet' href='css/nav.css' />
+    <link rel='stylesheet' href='css/create_collection.css' />
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type='module' src='js/supabaseClient.js' defer></script>
+    <script type='module' src='js/nav.js' defer></script>
+    <script type='module' src='js/create_playlist.js' defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+        <nav class="navbar navbar-expand sticky-top">
+            <div class="container-fluid nav-container">
+                <!-- Image on the left -->
+                <a class="navbar-brand" href="feed.html">
+                    <img src="img/logo-big.svg" alt="Logo" width="120" height="30">
+                </a>
+                <img id='navProfilePic'>
+                <a id='userDisplay'></a>
+
+                <!-- Navbar links on the right -->
+                <ul class="navbar-nav ms-auto flex-nowrap">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Music</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li> -->
+                    <li class='nav-item'>
+                        <a id='signOut' class='nav-link' href='#'>SIGN OUT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+    </header>
+    <main>
+        <div class="container form-container mt-5">
+            <h2 class="mb-4"><img src='img/playlist-icon.png' height='50' style='margin-right: 0.5em'>CREATE A PLAYLIST</h2>
+            <form id="collectionForm">
+                <div class="form-group">
+                    <label for="playlistTitle" class='form-label'>TITLE</label>
+                    <input type="text" class="form-control" id="playlistTitle" name="playlistTitle" placeholder='Give your Playlist a name' required>
+                </div>
+                <div class="form-group">
+                    <label for="image" class="form-label">COVER IMAGE</label>
+                    <input type="file" class="form-control" id="image" name="image">
+                </div>
+                <div class="form-group">
+                    <label for="playlistDescription" class='form-label'>DESCRIPTION<sub>(optional)</sub></label>
+                    <textarea class="form-control" id="playlistDescription" name="playlistDescription" placeholder="What's this playlist about?"></textarea>
+                </div>
+                <p style='font-weight: lighter; margin: 0.5em'>
+                    <em><strong>Don't worry!</strong> You'll be able to add songs to this playlist later as you find them.</em>
+                </p>
+
+                <button type="submit" class="btn btn-primary">CREATE PLAYLIST</button>
+            </form>
+        </div>
+
+
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>

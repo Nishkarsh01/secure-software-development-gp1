@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>thing - Profile</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <link rel='stylesheet' href='css/main.css' />
+    <link rel='stylesheet' href='css/feed.css' />
+    <link rel='stylesheet' href='css/nav.css' />
+    <link rel='stylesheet' href='css/post.css' />
+    <link rel='stylesheet' href='css/profile.css' />
+    <link rel='stylesheet' href='css/audio.css' />
+    <link rel='stylesheet' href='css/collection.css' />
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type='module' src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" defer></script>
+    <script type='module' src='js/supabaseClient.js' defer></script>
+    <script type='module' src='js/nav.js' defer></script>
+    <script type='module' src='js/feed.js' defer></script>
+    <script type='module' src='js/profile.js' defer></script>
+    <!-- <script type='module' src='js/audio.js' defer></script> -->
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+        <nav class="navbar navbar-expand">
+            <div class="container-fluid nav-container">
+                <!-- Image on the left -->
+                <a class="navbar-brand" href="feed.html">
+                    <img src="img/logo-big.svg" alt="Logo" width="120" height="30">
+                </a>
+                <img id='navProfilePic'>
+                <a id='userDisplay'></a>
+
+
+                <!-- Navbar links on the right -->
+                <ul class="navbar-nav ms-auto flex-nowrap">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Music</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li> -->
+                    <li class='nav-item'>
+                        <a id='signOut' class='nav-link' href='#'>SIGN OUT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+    </header>
+    <main>
+
+        <div class='container profile-header'>
+            <div class='row'>
+                <!-- PROFILE SUMMARY -->
+                <div class='col-6 summary-container'>
+                    <h1 id='profileDisplayName'>Display Name</h1>
+                    <img class='img-fluid summary-profile-picture'
+                        src='img/users/cc235b9d-8b64-4a00-b32d-1e639100d268/profile-pic.png'>
+                    <h2>Bio</h2>
+                    <p class='bio'>
+                        Some kind of bio written by the band.
+                    </p>
+                    <p><a class='btn btn-primary' href='user_details.html'>EDIT PROFILE</a></p>
+                </div>
+
+                <div class='col-6'>
+                    <a id='profilePostsButton' class='row profile-button profile-button-active' href='#'>
+                        <h2>POSTS</h2>
+                    </a>
+                    <a id='profileSongsButton' class='row profile-button' href='#'>
+                        <h2>SONGS</h2>
+                    </a>
+                    <a id='profileAlbumsButton' class='row profile-button' href='#'>
+                        <h2>ALBUMS</h2>
+                    </a>
+                    <a id='profilePlaylistsButton' class='row profile-button' href='#'>
+                        <h2>PLAYLISTS</h2>
+                    </a>
+                    <a id='profileCollectionsButton' class='row profile-button' href='#'>
+                        <h2>COLLECTIONS</h2>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class='container all-posts-container'>
+            <div class='container post-container justify-content-center'>
+                <div class='row post-header'>
+                    <div class='col-2 profile-pic-container'>
+                        <img src='img/profile-placeholder.jpg' class='profile-picture'>
+                    </div>
+                    <div class='col-10 post-info-container'>
+                        <a href='#' class='username'>
+                            username
+                        </a>
+                        <h2 class='post-title'>
+                            post-title
+                        </h2>
+                        <p class='post-time'>Posted 11:33 AM 03/16/2024</p>
+                    </div>
+                </div>
+                <div class='row img-container'>
+                    <img class='post-img img-fluid' src=''>
+                </div>
+                <div class='row divider'></div>
+                <div class='row post-body'>
+                    <p>post-body</p>
+                </div>
+                <div class='divider'></div>
+                <div class='row post-footer'>
+                    <div class='col-9 footer-links-gap'></div>
+                    <div class='col-3 footer-links-container pull-right'>
+                        <a class='footer-link' href='#'>
+                            <img class='footer-icon' src='img/share-icon.png' />
+                        </a>
+                        <a class='footer-link' href='#'>
+                            <img id='comment-icon-1' class='footer-icon comment-icon' src='img/comment-icon.png' />
+                        </a>
+                        <span class='num-comments'>3</span>
+                        <a class='footer-link' href='#'>
+                            <img class='footer-icon' src='img/heart-icon.png' />
+                        </a>
+                        <span class='num-likes'>5</span>
+                    </div>
+                </div>
+                <div id='comments-1' class='row container comments-container'>
+                    <!-- COMMENT -->
+                    <div class='row comment'>
+                        <div class='col-2 comment-header'>
+                            <img class='comment-profile-picture' src='img/profile-placeholder.jpg'>
+                        </div>
+                        <div class='col-10'>
+                            <a class='comment-username' href='#'>
+                                Username030303
+                            </a>
+                            <p class='comment-body'>
+                                This is a comment someone left on this post.
+                            </p>
+                        </div>
+                    </div>
+                    <div class='divider'></div>
+
+                    <!-- COMMENT -->
+                    <div class='row comment'>
+                        <div class='col-2 comment-header'>
+                            <img class='comment-profile-picture' src='img/profile-placeholder.jpg'>
+                        </div>
+                        <div class='col-10'>
+                            <a class='comment-username' href='#'>
+                                Username030303
+                            </a>
+                            <p class='comment-body'>
+                                Another comment. This one is a bit more long winded and has a lot to say about what
+                                the
+                                poster is talking about in their post. A classic scenario when it comes to putting
+                                your
+                                opinion on the internet.
+                            </p>
+                        </div>
+                    </div>
+                    <div class='divider'></div>
+
+                    <!-- COMMENT -->
+                    <div class='row comment'>
+                        <div class='col-2 comment-header'>
+                            <img class='comment-profile-picture' src='img/profile-placeholder.jpg'>
+                        </div>
+                        <div class='col-10'>
+                            <a class='comment-username' href='#'>
+                                Username030303
+                            </a>
+                            <p class='comment-body'>
+                                Come to Brazil!
+                            </p>
+                        </div>
+                    </div>
+                    <div class='divider'></div>
+                </div>
+            </div>
+        </div>
+
+        <div class='container all-audio-container'>
+            <div class="container audio-player-container" data-audio-id="audio2">
+                <div class='row'>
+                    <!-- IMAGE  -->
+                    <div class='col-1'>
+                        <img class='audio-cover-image' src='img/profile-placeholder.jpg'>
+                    </div>
+                    <audio class="audio-player" id="audio2"
+                        src="https://vfhfxrahmimzvkxnyiqx.supabase.co/storage/v1/object/public/songs/ffd45d4b-7012-4a80-8700-34106401f1b6.mp3"></audio>
+                    <!-- PLAY/PAUSE BUTTON -->
+                    <div class='col-1'>
+                        <button class="playButton">
+                            <img src='img/play.png'>
+                        </button>
+
+                        <button class="pauseButton" style="display:none;">
+                            <img src='img/pause.png'>
+                        </button>
+                    </div>
+
+                    <!-- SEEKER -->
+                    <div class='col'>
+                        <div class='row audio-info'>
+                            <div class='col-1 audio-profile-pic-container'>
+                                <img class='audio-profile-pic' src='img/profile-placeholder.jpg'>
+                            </div>
+                            <div class='col'>
+                                <p class='audio-artist-display'>Artist Name</p>
+                                <p class='audio-title'>Audio Title</p>
+                            </div>
+
+                        </div>
+                        <div class='row'>
+                            <!-- <div class='col timer'>
+                                <span class='currentTime'>0:00</span>
+                            </div> -->
+                            <div class='col'>
+                                <input type="range" class="seekSlider" value="0" step="1">
+                            </div>
+
+                            <div class='col timer'>
+                                <span class="currentTime">0:00</span>
+                                <span> / </span>
+                                <span class="totalDuration">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ALBUMS  -->
+        <div class='container all-albums-container'></div>
+        <!-- PLAYLISTS -->
+        <div class='container all-playlists-container'>
+            
+        </div>
+        <!-- COLLECTIONS -->
+        <div class='container all-collections-container'>
+            <div class='container collections-container'>
+                <h1 class='collection-title'>
+                    Title
+                </h1>
+                <p class='collection-author'>Curated by AnonUser</p>
+                <p class='collection-description'><em>Collection description</em></p>
+
+                <ol class='collection-items-list'>
+                    <li class='container collection-item'>
+                        <div class='row'>
+                            <div class='col collection-item-img-container'>
+                                <img class='collection-item-img' src='img/cover-image-placeholder.png'>
+                            </div>
+                            <div class='col'>
+                                <h2 class='collection-item-title'>
+                                    Collection Item Title
+                                </h2>
+                                <div class='row'>
+                                    <div class='col collection-item-user-img-container'>
+                                        <img class='collection-item-user-img' src='img/profile-placeholder.jpg'>
+                                    </div>
+                                    <div class='col'>
+                                        <p class='collection-item-user-name'>UserName</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src='js/post.js'></script>
+</body>
+
+</html>

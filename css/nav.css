@@ -1,0 +1,66 @@
+/* Base Navigation */
+#userDisplay {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    font-weight: lighter;
+    text-decoration: none;
+    transition: color 0.5s ease-out;
+}
+
+#userDisplay:hover {
+    color: #205864;
+}
+
+#navProfilePic {
+    height: 2em;
+    margin-right: 0.5em;
+    border-radius: 2em;
+}
+
+.logo-nav {
+    max-height: 2em;
+}
+
+.navbar {
+    background-color: #F49404;
+    box-shadow: 0 0em 5em black;
+}
+
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.post-button {
+    margin: 0 auto;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-container {
+        display: none;
+    }
+
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
